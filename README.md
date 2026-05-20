@@ -169,7 +169,7 @@ Important options:
 
 | Option | Description |
 |---|---|
-| `Background` | `ltmnight` for shader mode, or path to image/video. |
+| `Background` | Defaults to `Backgrounds/ltmnight.mp4`; use `ltmnight` for shader mode, or a path to another image/video. |
 | `PartialBlur` | Enables blur behind the login form. |
 | `FormPosition` | `left`, `center`, or `right`. |
 | `HourFormat` | Time format. |
@@ -180,7 +180,7 @@ Important options:
 ## Notes
 
 - This theme requires Qt6 SDDM.
-- For speed, static image mode is usually faster than video/shader mode.
+- This fork defaults to the live video background. Static image mode remains available by setting `Background="Backgrounds/ltmnight.png"`.
 - `autoNumlock = true` is enabled in the bundled NixOS module.
 - If NumLock still does not activate under a Wayland greeter, SDDM/KWin may need extra keyboard config outside the theme.
 
