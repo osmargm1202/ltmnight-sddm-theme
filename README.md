@@ -70,6 +70,28 @@ Then include the module from your flake output:
 }
 ```
 
+Configure theme-specific options with:
+
+```nix
+services.displayManager.sddm.ltmnight = {
+  timeFormat = "ampm"; # default, or "24h"
+  background = "Backgrounds/ltmnight.mp4";
+  backgroundPlaceholder = "Backgrounds/ltmnight.png";
+};
+```
+
+To use a fixed generated background:
+
+```nix
+services.displayManager.sddm.ltmnight = {
+  timeFormat = "24h";
+  background = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+};
+```
+
+Generated backgrounds must be tracked in git before remote flake consumers can build them from GitHub.
+
 The module provides SDDM defaults with:
 
 ```nix
@@ -163,7 +185,7 @@ On mutable installs, the upstream theme also supports a user override file:
 Themes/hyprltm.conf.user
 ```
 
-On NixOS, prefer changing this repository and rebuilding the flake so the theme remains declarative.
+On NixOS, prefer `services.displayManager.sddm.ltmnight` for clock and background changes. For unsupported theme keys, change this repository and rebuild the flake so the theme remains declarative.
 
 Generated candidate backgrounds live in:
 
@@ -175,15 +197,18 @@ Set `Background` and `BackgroundPlaceholder` to any candidate path to make it th
 
 Important options:
 
-| Option | Description |
-|---|---|
-| `Background` | Defaults to `Backgrounds/ltmnight.mp4`; use `ltmnight` for shader mode, or a path to another image/video. |
-| `PartialBlur` | Enables blur behind the login form. |
-| `FormPosition` | `left`, `center`, or `right`. |
-| `HourFormat` | Time format. |
-| `HeaderText` | Custom top/header text. |
-| `HideVirtualKeyboard` | Hide or show virtual keyboard toggle. |
-| `VirtualKeyboardAutoShow` | Auto-show virtual keyboard on input focus. |
+| Option                        | Description                                                                                               |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `Background`                  | Defaults to `Backgrounds/ltmnight.mp4`; use `ltmnight` for shader mode, or a path to another image/video. |
+| `PartialBlur`                 | Enables blur behind the login form.                                                                       |
+| `FormPosition`                | `left`, `center`, or `right`.                                                                             |
+| `HourFormat`                  | Time format. Default is AM/PM (`h:mm AP`); use `HH:mm` for 24-hour time.                                  |
+| NixOS `timeFormat`            | High-level module option: `"ampm"` or `"24h"`.                                                            |
+| NixOS `background`            | High-level module option for a theme-relative background path.                                            |
+| NixOS `backgroundPlaceholder` | High-level module option for the video placeholder image.                                                 |
+| `HeaderText`                  | Custom top/header text.                                                                                   |
+| `HideVirtualKeyboard`         | Hide or show virtual keyboard toggle.                                                                     |
+| `VirtualKeyboardAutoShow`     | Auto-show virtual keyboard on input focus.                                                                |
 
 ## Notes
 
