@@ -1,11 +1,11 @@
 [SddmGreeterTheme]
 Name=ltmnight-sddm-theme
-Description=Premium HyprLTM Theme
-Author=Djalel Oukid (aka sniper1720)
-Website=https://github.com/hyprltm/ltmnight-sddm-theme
+Description=NixOS-ready fork of the LTMNight SDDM Theme
+Author=Djalel Oukid (aka sniper1720), fork maintained by osmargm1202
+Website=https://github.com/osmargm1202/ltmnight-sddm-theme
 License=AGPL-3.0
 Type=sddm-theme
-Version=1.2.4
+Version=1.2.4-osmargm1202
 ConfigFile=Themes/hyprltm.conf
 Screenshot=Previews/ltmnight.png
 MainScript=Main.qml
