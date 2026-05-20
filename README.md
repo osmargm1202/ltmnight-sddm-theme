@@ -165,6 +165,14 @@ Themes/hyprltm.conf.user
 
 On NixOS, prefer changing this repository and rebuilding the flake so the theme remains declarative.
 
+Generated candidate backgrounds live in:
+
+```text
+Backgrounds/generated-candidates/
+```
+
+Set `Background` and `BackgroundPlaceholder` to any candidate path to make it the fixed login image.
+
 Important options:
 
 | Option | Description |
