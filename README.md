@@ -1,6 +1,6 @@
 # ltmnight-sddm-theme
 
-![Version](https://img.shields.io/badge/Version-v1.2.4--osmargm1202-bd93f9?style=for-the-badge&labelColor=282a36)
+![Version](https://img.shields.io/badge/Version-v1.2.4--osmargm1202-8be9fd?style=for-the-badge&labelColor=282a36)
 ![License](https://img.shields.io/badge/License-AGPL%20v3-ffb86c?style=for-the-badge&labelColor=282a36)
 ![Qt](https://img.shields.io/badge/Qt-6.10+-50fa7b?style=for-the-badge&labelColor=282a36)
 ![SDDM](https://img.shields.io/badge/SDDM-0.21+-8be9fd?style=for-the-badge&labelColor=282a36)
@@ -20,7 +20,7 @@ The goal of this fork is to make the theme easy to consume from a NixOS flake an
 
 ## Features
 
-- **LTMNight styling** — dark background, purple accents, and subtle glow effects.
+- **LTMNight styling** — dark background, sky-blue accents, and subtle glow effects.
 - **Static, video, or shader background** — configurable through the theme config.
 - **Partial blur** — frosted glass behind the login form.
 - **Clock and top bar** — time, host/session controls, and keyboard layout controls.

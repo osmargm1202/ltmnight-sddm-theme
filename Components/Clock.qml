@@ -59,9 +59,19 @@ Column {
             shadowHorizontalOffset: 0
         }
 
+        function formatAmPmTime(date) {
+            var hours = date.getHours()
+            var minutes = date.getMinutes()
+            var suffix = hours >= 12 ? "PM" : "AM"
+            var hour12 = hours % 12 || 12
+            var paddedMinutes = minutes < 10 ? "0" + minutes : minutes
+            return hour12 + ":" + paddedMinutes + " " + suffix
+        }
+
         function updateTime() {
             var locale = config.Locale ? Qt.locale(config.Locale) : Qt.locale()
-            text = new Date().toLocaleTimeString(locale, config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat)
+            var format = config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat
+            text = format === "h:mm AP" ? formatAmPmTime(new Date()) : new Date().toLocaleTimeString(locale, format)
         }
     }
 

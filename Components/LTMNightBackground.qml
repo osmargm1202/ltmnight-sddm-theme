@@ -5,7 +5,7 @@ Item {
     id: root
 
     property color bgColor: "#090a10"
-    property color accentColor: "#bd93f9"
+    property color accentColor: "#8be9fd"
     property real time: 0
 
     ShaderEffect {
