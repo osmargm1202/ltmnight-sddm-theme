@@ -5,8 +5,8 @@ Generated with GPT Image 2 for 2K SDDM login backgrounds. Final PNGs are normali
 To use one in SDDM, set `Background` in `Themes/hyprltm.conf`:
 
 ```ini
-Background="Backgrounds/generated-candidates/09-blue-professional-engineering.png"
-BackgroundPlaceholder="Backgrounds/generated-candidates/09-blue-professional-engineering.png"
+Background="Backgrounds/generated-candidates/18-neutral-hyprland.png"
+BackgroundPlaceholder="Backgrounds/generated-candidates/18-neutral-hyprland.png"
 ```
 
 ## Original purple/violet set

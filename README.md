@@ -75,8 +75,8 @@ Configure theme-specific options with:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "ampm"; # default, or "24h"
-  background = "Backgrounds/ltmnight.mp4";
-  backgroundPlaceholder = "Backgrounds/ltmnight.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
@@ -85,8 +85,8 @@ To use a fixed generated background:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "24h";
-  background = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
-  backgroundPlaceholder = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
@@ -199,7 +199,7 @@ Important options:
 
 | Option                        | Description                                                                                               |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `Background`                  | Defaults to `Backgrounds/ltmnight.mp4`; use `ltmnight` for shader mode, or a path to another image/video. |
+| `Background`                  | Defaults to `Backgrounds/generated-candidates/18-neutral-hyprland.png`; use `ltmnight` for shader mode, or a path to another image/video. |
 | `PartialBlur`                 | Enables blur behind the login form.                                                                       |
 | `FormPosition`                | `left`, `center`, or `right`.                                                                             |
 | `HourFormat`                  | Time format. Default is AM/PM (`h:mm AP`); use `HH:mm` for 24-hour time.                                  |
@@ -213,7 +213,7 @@ Important options:
 ## Notes
 
 - This theme requires Qt6 SDDM.
-- This fork defaults to the live video background. Static image mode remains available by setting `Background="Backgrounds/ltmnight.png"`.
+- This fork defaults to a static neutral generated background: `Backgrounds/generated-candidates/18-neutral-hyprland.png`. Video mode remains available by setting `Background` to a video path such as `Backgrounds/ltmnight.mp4`.
 - `autoNumlock = true` is enabled in the bundled NixOS module.
 - If NumLock still does not activate under a Wayland greeter, SDDM/KWin may need extra keyboard config outside the theme.
 

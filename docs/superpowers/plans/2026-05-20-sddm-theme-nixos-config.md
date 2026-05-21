@@ -44,8 +44,8 @@ Add this attrset after the existing `packages = ...;` block and before `nixosMod
               ({ ... }: {
                 services.displayManager.sddm.ltmnight = {
                   timeFormat = "24h";
-                  background = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
-                  backgroundPlaceholder = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+                  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+                  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
                 };
               })
             ];
@@ -58,8 +58,8 @@ Add this attrset after the existing `packages = ...;` block and before `nixosMod
             conf="${configuredTheme}/share/sddm/themes/${themeName}/Themes/hyprltm.conf"
 
             grep -q 'HourFormat="HH:mm"' "$conf"
-            grep -q 'Background="Backgrounds/generated-candidates/09-blue-professional-engineering.png"' "$conf"
-            grep -q 'BackgroundPlaceholder="Backgrounds/generated-candidates/09-blue-professional-engineering.png"' "$conf"
+            grep -q 'Background="Backgrounds/generated-candidates/18-neutral-hyprland.png"' "$conf"
+            grep -q 'BackgroundPlaceholder="Backgrounds/generated-candidates/18-neutral-hyprland.png"' "$conf"
 
             touch "$out"
           '';
@@ -212,8 +212,8 @@ Replace the current `nixosModules.default = { lib, pkgs, ... }:` module with thi
 
             background = lib.mkOption {
               type = lib.types.str;
-              default = "Backgrounds/ltmnight.mp4";
-              example = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+              default = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+              example = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
               description = ''
                 Theme-relative background path for the LTMNight SDDM theme.
                 Use `ltmnight` for shader mode, or a path under `Backgrounds/` for image/video mode.
@@ -222,8 +222,8 @@ Replace the current `nixosModules.default = { lib, pkgs, ... }:` module with thi
 
             backgroundPlaceholder = lib.mkOption {
               type = lib.types.str;
-              default = "Backgrounds/ltmnight.png";
-              example = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+              default = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+              example = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
               description = ''
                 Theme-relative placeholder image path used while video backgrounds load.
               '';
@@ -317,8 +317,8 @@ Configure theme-specific options with:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "ampm"; # default, or "24h"
-  background = "Backgrounds/ltmnight.mp4";
-  backgroundPlaceholder = "Backgrounds/ltmnight.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
@@ -327,8 +327,8 @@ To use a fixed generated background:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "24h";
-  background = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
-  backgroundPlaceholder = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
@@ -390,8 +390,8 @@ Expected:
 
 ```text
 HourFormat="h:mm AP"
-Background="Backgrounds/ltmnight.mp4"
-BackgroundPlaceholder="Backgrounds/ltmnight.png"
+Background="Backgrounds/generated-candidates/18-neutral-hyprland.png"
+BackgroundPlaceholder="Backgrounds/generated-candidates/18-neutral-hyprland.png"
 ```
 
 - [ ] **Step 4: Inspect configured module output from check derivation**

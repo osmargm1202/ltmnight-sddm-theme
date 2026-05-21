@@ -16,7 +16,7 @@ Add high-level NixOS module options for the LTMNight SDDM theme so hosts can cho
 | Public NixOS API      | Expose high-level options: `timeFormat`, `background`, and `backgroundPlaceholder`.                            |
 | Time format values    | Use `"ampm"` as the default and `"24h"` as the configurable alternative.                                       |
 | Theme config mapping  | Map `"ampm"` to `HourFormat="h:mm AP"` and `"24h"` to `HourFormat="HH:mm"`.                                    |
-| Background selection  | Accept a theme-relative path like `Backgrounds/generated-candidates/09-blue-professional-engineering.png`.     |
+| Background selection  | Default to `Backgrounds/generated-candidates/18-neutral-hyprland.png`; accept any safe theme-relative path.      |
 | Config generation     | Keep the upstream `Themes/hyprltm.conf` file as the source, then patch selected keys in the Nix package build. |
 | SDDM integration      | Keep `services.displayManager.sddm.theme = "ltmnight"`; only change the package installed by the module.       |
 | Generated backgrounds | Generated files under `Backgrounds/` must be tracked by git before flake consumers can build them from GitHub. |
@@ -28,8 +28,8 @@ Target configuration shape:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "ampm"; # default, or "24h"
-  background = "Backgrounds/ltmnight.mp4";
-  backgroundPlaceholder = "Backgrounds/ltmnight.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
@@ -38,8 +38,8 @@ Example using a generated static background:
 ```nix
 services.displayManager.sddm.ltmnight = {
   timeFormat = "24h";
-  background = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
-  backgroundPlaceholder = "Backgrounds/generated-candidates/09-blue-professional-engineering.png";
+  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
 };
 ```
 
