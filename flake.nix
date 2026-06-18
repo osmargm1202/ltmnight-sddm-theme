@@ -109,8 +109,8 @@
               ({ ... }: {
                 services.displayManager.sddm.ltmnight = {
                   timeFormat = "24h";
-                  background = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
-                  backgroundPlaceholder = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+                  background = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
+                  backgroundPlaceholder = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
                 };
               })
             ];
@@ -125,8 +125,8 @@
             conf="${configuredTheme}/share/sddm/themes/${themeName}/Themes/hyprltm.conf"
 
             grep -Fxq 'HourFormat="HH:mm"' "$conf"
-            grep -Fxq 'Background="Backgrounds/generated-candidates/18-neutral-hyprland.png"' "$conf"
-            grep -Fxq 'BackgroundPlaceholder="Backgrounds/generated-candidates/18-neutral-hyprland.png"' "$conf"
+            grep -Fxq 'Background="Backgrounds/generated-candidates/20-neutral-cybernetic.png"' "$conf"
+            grep -Fxq 'BackgroundPlaceholder="Backgrounds/generated-candidates/20-neutral-cybernetic.png"' "$conf"
 
             touch "$out"
           '';
@@ -161,8 +161,8 @@
 
             background = lib.mkOption {
               type = themeConfigValueType;
-              default = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
-              example = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+              default = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
+              example = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
               description = ''
                 Theme-relative background path for the LTMNight SDDM theme.
                 Use a non-empty value without quotes or newlines. Paths under
@@ -172,8 +172,8 @@
 
             backgroundPlaceholder = lib.mkOption {
               type = themeConfigValueType;
-              default = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
-              example = "Backgrounds/generated-candidates/18-neutral-hyprland.png";
+              default = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
+              example = "Backgrounds/generated-candidates/20-neutral-cybernetic.png";
               description = ''
                 Theme-relative placeholder image path used while video backgrounds load.
                 Use a non-empty value without quotes or newlines.
